@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #FBF9F5;
+    --card: #F4F0E8;
+    --card-subtle: #EFE9DC;
+    --card-floating: #FFFFFF;
+    --ink-primary: #221F1D;
+    --ink-secondary: #57524E;
+    --ink-muted: #8C827A;
+    --ink-inverted: #FBF9F5;
+    --canopy-deep: #2D4739;
+    --canopy-sage: #5B7563;
+    --canopy-tint: #E2EBE4;
+    --heat-terracotta: #B84A39;
+    --heat-amber: #D97746;
+    --heat-ochre: #EAB365;
+    --heat-tint: #FBEFEA;
+    --border-hairline: rgba(34, 31, 29, 0.07);
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Monospaced numbers with tabular figures for zero jitter on live values */
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', 'Space Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Warm Parchment Cartography Map Tile Filter */
+.leaflet-container {
+  background-color: #FBF9F5 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.leaflet-tile-pane {
+  filter: sepia(18%) saturate(85%) brightness(98%) contrast(96%);
+}
+
+/* Custom Leaflet Controls */
+.leaflet-control-zoom {
+  border: 1px solid rgba(34, 31, 29, 0.08) !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px -5px rgba(78, 67, 58, 0.08) !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #FFFFFF !important;
+  color: #221F1D !important;
+  border-bottom: 1px solid rgba(34, 31, 29, 0.08) !important;
+  transition: all 0.2s ease;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #F4F0E8 !important;
+  color: #2D4739 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #EFE9DC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C827A;
+}
+
+/* Print Stylesheet for Federal Grant Dossier */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-page {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #FFFFFF !important;
+  }
+  @page {
+    margin: 1.5cm;
+    size: letter portrait;
+  }
+}
