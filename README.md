@@ -1,9 +1,10 @@
 # Hyper-Local-Heat-Island-Analyzer
 
-[![Deploy to GitHub Pages](https://github.com/domainschool/Hyper-Local-Heat-Island-Analyzer/actions/workflows/deploy.yml/badge.svg)](https://github.com/domainschool/Hyper-Local-Heat-Island-Analyzer/actions/workflows/deploy.yml)
 [![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-brightgreen)](https://domainschool.github.io/Hyper-Local-Heat-Island-Analyzer/)
+[![GitHub Pages](https://img.shields.io/badge/Deployment-gh--pages-blue)](https://github.com/domainschool/Hyper-Local-Heat-Island-Analyzer/tree/gh-pages)
 [![SDG 11](https://img.shields.io/badge/UN%20SDG-11%3A%20Sustainable%20Cities-orange)](https://sdgs.un.org/goals/goal11)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![React 18](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 **The Urban Canopy Report — Hyper-Local Heat Island Analyzer (SDG 11)**  
 *An Editorial Climate Intelligence Interface contrasting Land Surface Temperature (LST) anomalies with urban tree canopy deficits to unlock municipal resilience funding.*
@@ -113,24 +114,25 @@ The production output will be generated in the `dist/` directory.
 
 ---
 
-## 🌐 GitHub Pages Deployment
-
-### Option A: Automatic via GitHub Actions (Recommended)
-This repository includes a `.github/workflows/deploy.yml` workflow that automatically builds and deploys the application upon every push to the `main` branch.
-
-To enable GitHub Pages in your repository:
-1. Navigate to **Settings** > **Pages** in your GitHub repository.
-2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
-3. Push to `main` — GitHub Actions will automatically deploy to `https://domainschool.github.io/Hyper-Local-Heat-Island-Analyzer/`.
-
-### Option B: Deploy from the `gh-pages` Branch
-You can also deploy directly using the included `gh-pages` script:
-
+## 🌐 GitHub Pages Deployment & Activation
+ 
+The production application is pre-built and published to the `gh-pages` branch on GitHub.
+ 
+### Activating GitHub Pages (One-time Setup)
+1. Go to your repository on GitHub: [Hyper-Local-Heat-Island-Analyzer Settings](https://github.com/domainschool/Hyper-Local-Heat-Island-Analyzer/settings/pages).
+2. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
+3. Under **Branch**, select `gh-pages` and `/ (root)`.
+4. Click **Save**.
+5. Your application will be live at:
+   👉 **[https://domainschool.github.io/Hyper-Local-Heat-Island-Analyzer/](https://domainschool.github.io/Hyper-Local-Heat-Island-Analyzer/)**
+ 
+### Redeploying Updates
+Whenever you make changes to the source code, deploy the updated build in one command:
+ 
 ```bash
 pnpm run deploy
 ```
-
-In GitHub **Settings** > **Pages**, set **Source** to **Deploy from a branch** and select `gh-pages` (`/root`).
+This automatically runs `pnpm run build` and updates the `gh-pages` branch on GitHub.
 
 ---
 
